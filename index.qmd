@@ -1,0 +1,532 @@
+---
+title: "Autogestão do voluntariado conscienciológico: Relatório de 2025"
+author:
+  - name: Eduardo Santana
+    orcid: 0000-0002-9165-9438
+    corresponding: true
+    email: eduardo@editares.org
+    roles:
+      - Soluções Tecnológicas
+      - Diagramador
+      - Técnico de Transmissão
+    affiliations:
+      - ISIC
+      - Editares
+      - Juriscons
+keywords:
+  - Voluntariado
+  - Conscienciologia
+  - Autogestão
+  - Relatório
+abstract: |
+  This report contains my self-research related to conscienciology volunteer work.
+plain-language-summary: |
+  Este relatório apresenta minha autopesquisa realizada a partir das atividades do voluntariado na conscienciologia.
+key-points:
+  - Autogestão do voluntariado
+  - Recins
+  - Recéxis
+date: last-modified
+bibliography: references.bib
+#citation:
+#  container-title: Earth and Space Science
+number-sections: true
+---
+
+# Introdução
+
+Este relatório. 
+
+```{=html}
+<!-- 
+
+O quê? Por quê? Para quê? Como? Quando?
+
+Quesitos. Visando auxiliar o leitor-pesquisador na elaboração de um projeto técnico de autopesquisa, indica-se a elaboração dos 8 seguintes quesitos, interconectados entre si:
+1. Tema: clareza do assunto a tratar, o tema.
+2. Problema: formulação do problema da pesquisa.
+3. Hipóteses: proposições admissíveis, possibilidades de respostas para a investigação.
+4. Justificativa: motivo para realizar determinada pesquisa.
+5. Metodologia: estabelecimento dos métodos a seguir.
+6. Objetivo: definição do propósito geral e específicos.
+7. Prazo: cronograma das atividades.
+8. Revisão da literatura: pesquisa da bibliografia existente sobre a temática.
+
+
+Delimitador. O foco delimita o tema.
+Exemplo. Para ilustrar a determinação de um tema de pesquisa e o respectivo foco, segue exemplo: – Em uma pesquisa sobre pensenidade, manifestação dos autopensenes é tema (denota abrangência) e manutenção da ortopensenidade nas Ações Diárias é um foco dentro do tema (especifica a abordagem da pesquisa no contexto da manifestação dos autopensenes).
+
+
+-->
+```
+
+<!-- Pesquisar INVENTARIOLOGIA -->
+
+# Método
+
+## Base dos dados
+
+### ICnet
+
+O Sistema ICnet é um pacote de soluções de software que permite a gestão integrada de várias áreas das Instituições Conscienciocêntricas, @icnetDocs:
+
+1.  Voluntariado.
+2.  Eventos.
+3.  Gestão financeira (receitas e despesas) e contábil.
+4.  Ecommerce.
+5.  Dinâmicas parapsíquicas.
+6.  Laboratórios.
+7.  Hospedagem em Campus.
+8.  Gescons.
+9.  Gerenciamento de Ensino a Distância.
+10. Marketing Digital.
+
+Através de uma conta com permissões admnistrativas de uma IC é possível acessar os dados cadastrados no sistema.
+
+Nas seções a seguir são apresentadas as telas contendo os dados registrado no sistema.
+
+### Voluntariado
+
+Para acessar o módulo de gestão de Voluntariado é necessário logar com uma conta administrativa de usuário da IC.
+
+![Extração do ICNet](images/voluntariado-na-ic.png){#fig-voluntariado-na-ic}
+
+A @fig-voluntariado-na-ic apresenta a tela de Voluntariado (para o voluntário Eduardo de Santana Medeiros) na IC Juriscons. Nela podemos verificar que "Eduardo de Santana Medeiros" está *ativo* no voluntariado (nenhuma data de saída), que está lotado na Sede da JURISCONS (em Foz do Iguaçu), está vinculado através do organograma da instituição em *Colegiado Administrativo \\ Relações Institucionais* com função de *Membro* e iniciou formalmente o voluntariado em *11/06/2025*.
+
+A tela de "Voluntariado em Outras IC's", não apresentada mas acessível a partir desta tela, possui estrutura semelhante.
+
+### Participação em equipes
+
+![Participação em equipes cadastradas no ICnet](images/participacao-em-equipe.png){#fig-equipe}
+
+A tela de Participação em Equipe na @fig-equipe lista em quais equipes o voluntario(a) participou.
+
+### Histórico de atividades
+
+![Histórico de atividades no ICNet consultado em 31/8/2025](images/historico.png){#fig-atividades}
+
+A @fig-atividades apresenta o histórico das atividades registradas no sistema. A coluna "Data Início" indica a data de início do evento, os eventos listados não são indicativos de presença, uma vez que existe evento para o ano sequinte (2026).
+
+O hitórico de atividades extraídos pelo ICNet poder conter alguns erros de datas (@fig-historicoerros).
+
+![Erros no Histórico de atividades no ICNet](images/historico-erros.png){#fig-historicoerros}
+
+### Laboratórios
+
+![Laboratórios](images/laboratorios.jpg)
+
+### E-mail
+
+![Consulta no E-mail](images/consulta-no-email.png){#fig-consultaemail} O E-mail também uma rica fonte de informações, pois é habitual receber confirmações de compras ou tickets no e-mail.
+
+### Calendário
+
+A agenda de compromissos é um ótimo recurso para consultar eventos anteriores (ver @fig-agenda).
+
+![Pesquisa no calendário](images/calendar.png){#fig-agenda}
+
+### WhatsApp
+
+![Pesquisa no WhatsApp](images/whatsapp.png){#fig-whatsapp}
+
+Alguns eventos podem ser pesquisados através do WhatsApp (@fig-whatsapp), como é o caso das atividades realizadas na OIC (que não usa o ICNet para registros de atendimentos).
+
+## Livros
+
+As compras (ou recebimento de presentes) de livros podem ter registros no e-mail ou uma organização da biblioteca pessoal pode set implementada manualmente.
+
+## Software
+
+### CosmoWare
+
+O CosmoWare, @CosmoWareExtension, é uma extensão para o Google Chrome (Ver @fig-cosmoware) que adiciona funcionalidades aos sites da conscienciologia, especificamente ao ICNET. Com ela é possível exportar os dados do ICNET em planilhas compatíveis com o RStudio, @rstudio.
+
+![Utilização do CosmoWare para extração dos dados do ICNET](images/cosmoware-exportar-planilhas.png){#fig-cosmoware}
+
+
+
+### Instant Data Scraper
+
+Para a extração de dados do ICNet (ver @fig-atividades) copiar e colar no Excel é suficiente.
+
+Extrações mais complexas podem ser realizadas com a extensão para o Google Chrome chamada Instant Data Scraper, criada por @instantDataScraper. A @fig-instantdata mostra uma extração de uma lista de pedidos de compras na Megastore.
+
+![Extração de dados na Megastore através do Instant Data Scraper](images/instant-data-scraper.png){#fig-instantdata}
+
+### Track & Graph
+
+O Track & Graph (@fig-trackandgraph) é um aplicativo para Android, @trackandgraph, que permite o registro de dados pessoas e exportação dos dados para planilhas. Pode ser utilizado para registro de tentativas de EV, de peso, sinaléticas ou qualquer outras variáveis que forem configuradas.
+
+![Track & Graph](images/Screenshot_20250902_183240_Track_and_Graph.jpg){#fig-trackandgraph}
+
+### RStudio
+
+O RStudio mantido por @rstudio é uma IDE (Ambiente de Desenvolvimento Integrado) que permite a edição dos documentos e agrupa diversas funcionalidades para gerenciar o projeto. Ela é uma ferramenta de referência para a ciência de dados de código aberto.
+
+Este documento foi redigido no RStudio.
+
+![Escrita do documento no RStudio](images/rstudio.png)
+
+### Quarto
+
+O Quarto mantido por @quarto é um sistema de código aberto para escrita e publicação técnica e científica. Ela é uma ferramenta de comandos de linhas para gerenciar e publicar projetos, integrada nas versões recentes do RStudio.
+
+Segundo @vieira1986projeciologia projeciologia é cool.
+
+# Objetivos e metas
+
+## Objetivos gerais
+
+-   **Epicon**.
+-   **Docência**. Docência consciencilógica.
+-   **Grupo-carma**. Manter-se como epicentro da Conscienciologia em João Pessoa.
+-   **Independência financeira**. Aposentar mais cedo para dedicar-se ao desenvolvimento e interassistência.
+-   **Metas**. Traçar metas para os próximos anos.
+
+## Metas estabelecidas para 2025
+
+-   Vir para Foz do Iguaçu e estudar a Conscienciologia
+-   Estar ápito e na lista de espera para realizar curso de docência através da Reaprendia em 2026.
+-   Pelo menos uma projeção lúcida.
+-   Estado vibracional identificado.
+-   Autopesquisa em execução. Registro diversos e análise incipiente.
+-   Peso em monitoramento com medições constantes.
+-   Expansão de reserva de emergência para 12 meses.
+
+## Outras metas
+
+-   Identificação de Proéxis
+-   Planejamento de curso livre
+-   Planejamento estratégico evolucente
+-   Apropriação das Metas do Inversor aos 40 anos
+-   Dominar o EV
+-   Dupla evolutiva
+-   CPC Ativo
+
+- traçar o plano
+- tertulia matinal > meta interessante
+
+- verbete > infocomunicologia > ferramentas de pesquisas conscienciologicas
+
+auto pesquisa projeciologica -- info comunicologia e projeciologia
+
+usar projções da consciencia para testar
+
+Artigo
+
+# Dados coletados
+
+Através do ICNet podemos extrair diversos dados sobre nossa atuação na CCCI.
+
+Na seções a seguir são apresentadas diversos dados extraídos do ICNet.
+
+## Voluntariado
+
+```{r}
+#| label: tbl-voluntariados
+#| tbl-cap: Assinatura dos voluntariados
+
+library(readr)
+library(dplyr)
+library(knitr)
+
+voluntariados <- read_csv("csv/voluntariados.csv")
+
+
+kable(voluntariados, format = "pipe")
+```
+
+A @tbl-voluntariados apresenta o dia o contrato de voluntariado para cada instituição foi assinado. A ISIC e EDITARES ainda não incluiu no sistema em qual departamento foi incluído.
+
+```{mermaid}
+timeline
+    title Ingresso no Voluntariado
+    06/2025 : ISIC
+            : JURISCONS
+            : HOLOMEMÓRIA
+    07/2025 : EDITARES
+```
+
+A HOLOMEMÓRIA é uma condição especial, por não ser uma IC, da mesma forma que o ICGE também não é. Ambas são iniciativas da CCCI com o apoio da UNICIN.
+
+## Participação em Equipe
+
+```{r}
+library(readr)
+library(dplyr)
+library(knitr)
+
+participacao_em_equipe <- read_csv(
+  "csv/participacao_em_equipe.csv",
+  col_types = cols(`Data Início` = col_date(format = "%d/%m/%Y"))
+) %>%
+  select(-`Cód. Turma`) %>%           # Remove a coluna
+  mutate(`Data Início` = format(`Data Início`, "%d/%m/%Y"))  # Reformatar data
+
+kable(participacao_em_equipe, format = "pipe")
+```
+
+## Histórico de atividades
+
+Segue uma tabela contendo hitórico de atividades extraídos pelo ICNet:
+
+```{r}
+library(readr)
+library(dplyr)
+library(knitr)
+
+historico <- read_csv(
+  "csv/historico.csv",
+  col_types = cols(`Data Início` = col_date(format = "%d/%m/%Y"))
+) %>%
+  select(-`Cód.Turma`) %>%  # Remove a coluna de código da turma
+  mutate(`Data Início` = format(`Data Início`, "%d/%m/%Y"))  # Reformatar data
+
+kable(historico, format = "pipe")
+```
+
+## Dinâmicas
+
+OIC
+
+26,28,29/8
+
+## Laboratórios
+
+## Cursos de Campo
+
+## Registros no E-mail
+
+```{=html}
+<!--
+
+- Expotação com IA: https://chromewebstore.google.com/detail/ofaokhiedipichpaobibbnahnkdoiiah?utm_source=item-share-cb
+
+- Exportação no G-mail: https://support.cloudhq.net/category/browser-extensions/export-emails-to-excel-csv-or-google-sheet/
+
+-->
+```
+
+## Compras
+
+Minhas compras:
+
+```{r}
+#| label: tbl-compras
+#| tbl-cap: Lista das compras
+library(readr)
+library(dplyr)
+library(knitr)
+
+compras <- read_csv(
+  "csv/compras.csv",
+  col_types = cols(Data = col_date(format = "%m/%d/%Y"))
+) %>%
+  select(Data, Loja, Categoria, Produto) %>%  # Mantém apenas as 4 primeiras colunas
+  mutate(Data = format(Data, "%d/%m/%Y"))     # Reformatar data para dd/mm/aaaa
+
+kable(compras, format = "pipe")
+```
+
+## Acoplamentarium
+
+Na @tbl-acoplamentarium estão os cursos de Acoplamentarium realizados:
+
+```{r}
+#| label: tbl-acoplamentarium
+#| tbl-cap: Cursos de Acoplamentarium de 2025
+#| 
+library(readr)
+library(dplyr)
+library(knitr)
+
+acomplamentarium <- read_csv(
+  "csv/acoplamentarium.csv",
+  col_types = cols(Data = col_date(format = "%d/%m/%Y"))
+) %>%
+  mutate(Data = format(Data, "%d/%m/%Y"))  # Formatar datas no padrão dd/mm/aaaa
+
+kable(acomplamentarium, format = "pipe")
+```
+
+## Soma
+
+### Evolução do Peso
+
+```{r}
+#| label: fig-peso-mmc-2025
+#| fig-cap: "Evolução do peso em com faixas de IMC (OMS) - 2025"
+#| echo: false
+
+library(readr)
+library(dplyr)
+library(lubridate)
+library(ggplot2)
+library(scales)
+library(tibble)
+
+# === PARAMETRO: sua altura em metros ===
+altura_m <- 1.72  # <- ajuste aqui
+
+# Função para converter IMC em peso (kg) dado altura
+peso_imc <- function(imc, h) imc * h^2
+
+# Cortes OMS para obesidade
+w30 <- peso_imc(30, altura_m)  # início Obesidade I
+w35 <- peso_imc(35, altura_m)  # início Obesidade II
+w40 <- peso_imc(40, altura_m)  # início Obesidade III
+
+# Intervalo que você quer destacar no gráfico
+ymin_plot <- 100
+ymax_plot <- 112
+
+# Tabela de faixas com cores mais nítidas
+faixas <- tribble(
+  ~cat,             ~ymin, ~ymax, ~fill,
+  "Sobrepeso (25–29.9)",                peso_imc(25, altura_m), min(w30, ymax_plot), "#A5D6A7",
+  "Obesidade I (30–34.9)",              max(w30, ymin_plot),     min(w35, ymax_plot), "#FFCC80",
+  "Obesidade II (35–39.9)",             max(w35, ymin_plot),     min(w40, ymax_plot), "#EF9A9A",
+  "Obesidade III (≥40)",                max(w40, ymin_plot),     ymax_plot,           "#F48FB1"
+) %>%
+  filter(ymax > ymin) %>%
+  mutate(ymin = pmax(ymin, ymin_plot),
+         ymax = pmin(ymax, ymax_plot))
+
+# Lê e prepara os dados
+dados <- read_csv("csv/TrackAndGraph-20260122-204431.csv")
+
+peso_2025 <- dados %>%
+  filter(FeatureName == "Peso") %>%
+  mutate(
+    Timestamp = ymd_hms(Timestamp),
+    Value = as.numeric(Value)
+  ) %>%
+  filter(year(Timestamp) == 2025 | year(Timestamp) == 2026) %>%
+  arrange(Timestamp)
+
+# limites do eixo X para pintar as faixas no fundo
+xmin <- min(peso_2025$Timestamp, na.rm = TRUE)
+xmax <- max(peso_2025$Timestamp, na.rm = TRUE)
+
+# Define locale para português
+Sys.setlocale("LC_TIME", "pt_BR.UTF-8") # Windows: "Portuguese_Brazil.1252"
+
+ggplot() +
+  # Faixas de IMC no fundo
+  geom_rect(data = faixas,
+            aes(xmin = xmin, xmax = xmax, ymin = ymin, ymax = ymax, fill = cat),
+            inherit.aes = FALSE, alpha = 0.35, color = NA) +
+  # Série temporal do peso
+  geom_line(data = peso_2025, aes(x = Timestamp, y = Value), linewidth = 0.9) +
+  geom_point(data = peso_2025, aes(x = Timestamp, y = Value), size = 1.6) +
+  # Escalas
+  scale_x_datetime(
+    date_labels = "%d %b",   # dia + mês abreviado em português
+    date_breaks = "1 week",
+    expand = expansion(mult = c(0.01, 0.01))
+  ) +
+  scale_y_continuous(limits = c(ymin_plot, ymax_plot), labels = label_number(suffix = " kg")) +
+  # Cores e legenda
+  scale_fill_manual(
+    name = "Faixas de IMC",
+    values = setNames(faixas$fill, faixas$cat),
+    breaks = faixas$cat
+  ) +
+  labs(
+    title = "Evolução do peso com faixas de IMC (2025)",
+    x = "Data",
+    y = "Peso"
+  ) +
+  theme_minimal(base_size = 12) +
+  theme(
+    plot.title = element_text(face = "bold", hjust = 0.5),
+    axis.text.x = element_text(angle = 45, hjust = 1),
+    legend.position = "bottom"
+  )
+
+
+```
+
+# ECP1
+
+-   Eliminar a dispersão
+
+# Análise dos dados
+
+## Holopensene
+
+# Resultados
+
+# Apendice/Rascunho
+
+## Instituições conscenciocêntricas
+
+CEAEC
+
+:   Centro de Altos Estudos da Conscienciologia. <http://campusceaec.org>
+
+Editares
+
+:   A editora da Conscienciologia. Website: <https://editares.org>
+
+ISIC
+
+:   Interassistantial Services for the Internationalization of Conscientiology. Website: <https://www.isicons.org>
+
+Juriscon
+
+:   Associação Internacional de Paradireitologia. Website: <https://juriscons.org>
+
+## Atividades
+
+## Situações
+
+O que há em situações
+
+::: callout-note
+Privacidade. Os nomes das pessoas foram alterados para manter a privacidade.
+
+Substituição. Para manter uma coerência ao longo do relatório, alguns nomes foram substituidos por nomes em Latim.
+
+```{=html}
+<!-- 
+https://www.dicionariodenomesproprios.com.br/nomes-latim-femininos/
+https://www.dicionariodenomesproprios.com.br/nomes-latim-masculinos/
+-->
+```
+:::
+
+## Atividades e papeis
+
+| Atividade           | IC   |
+|---------------------|------|
+| Current             | 2021 |
+| Teneguía            | 1971 |
+| Nambroque           | 1949 |
+| El Charco           | 1712 |
+| Volcán San Antonio  | 1677 |
+| Volcán San Martin   | 1646 |
+| Tajuya near El Paso | 1585 |
+| Montaña Quemada     | 1492 |
+
+```{=html}
+<!--
+Atividade não oficiais
+- Reunião com Leandro
+- Como as atividades foram adicionadas
+-->
+```
+
+## Otimizadores
+
+### Agenda de compromissos atualizada
+
+Exclusão. Remover os compromissos recorrentes que não foi atendidos para evitar compromissos enexistentes.
+
+Presentes. Para os compromissos on-line, manter a lista de convidados consistente com quem realmente esteve no evento.
+
+Mudanças. Se houve mudanças de planos, criar um novo evento e remover o que não ocorreu.
+
+## Planejamento para o próximo ano
+
+# Rerefências
